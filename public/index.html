@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fieldnotes AI</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-icon">✎</div>
+          <div>
+            <h1>Fieldnotes</h1>
+            <small>AI teaching notebook</small>
+          </div>
+        </div>
+
+        <button id="new-note-btn" class="primary-btn">+ New note</button>
+        <div class="notes-list-wrapper">
+          <div class="section-title">Notes</div>
+          <div id="notes-list" class="notes-list"></div>
+        </div>
+
+        <div class="profile-box">
+          <div class="section-title">Teaching profile</div>
+
+          <label>
+            Explain for
+            <select id="audience-select">
+              <option value="a curious beginner">A curious beginner</option>
+              <option value="a middle-school student">A middle-school student</option>
+              <option value="a high-school student">A high-school student</option>
+              <option value="a university student">A university student</option>
+              <option value="a fellow teacher">A fellow teacher</option>
+            </select>
+          </label>
+
+          <label>
+            Teaching style
+            <select id="style-select">
+              <option value="clear, encouraging, and practical">Clear & encouraging</option>
+              <option value="Socratic, asking guiding questions">Socratic questioning</option>
+              <option value="structured, with examples and checks for understanding">Structured lesson</option>
+              <option value="brief, focused, and easy to scan">Brief & practical</option>
+            </select>
+          </label>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <div id="note-meta" class="note-meta">New note</div>
+            <div id="status-line" class="status-line">Saved locally</div>
+          </div>
+
+          <div class="toolbar">
+            <button id="save-btn" class="secondary-btn">Save</button>
+            <button id="download-btn" class="secondary-btn">Download .md</button>
+            <button id="expand-btn" class="primary-btn">Expand with AI</button>
+          </div>
+        </header>
+
+        <div class="editor-panel">
+          <input id="note-title" class="note-title" type="text" placeholder="Untitled note" />
+
+          <div class="attachment-box">
+            <label class="attachment-button" for="attachment-input">Attach photo</label>
+            <input id="attachment-input" type="file" accept="image/*" capture="environment" />
+            <div id="attachment-preview" class="attachment-preview"></div>
+          </div>
+
+          <textarea id="note-content" class="note-content" placeholder="Start writing your notes here..."></textarea>
+        </div>
+      </main>
+
+      <aside class="ai-panel">
+        <div class="section-title">Teaching assistant</div>
+
+        <div class="quick-actions">
+          <button class="quick-btn" data-action="expand">Explain</button>
+          <button class="quick-btn" data-action="quiz">Quiz me</button>
+          <button class="quick-btn" data-action="lesson">Make a lesson</button>
+          <button class="quick-btn" data-action="summarize">Summarize</button>
+        </div>
+
+        <div id="ai-output" class="ai-output">
+          Ask the AI to explain your notes or attach a photo of your work.
+        </div>
+
+        <div class="ai-controls">
+          <button id="apply-output-btn" class="primary-btn">Add AI response to note</button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

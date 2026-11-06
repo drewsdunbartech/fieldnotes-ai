@@ -1,0 +1,13 @@
+{
+  "id": "note-template",
+  "title": "Welcome to Fieldnotes",
+  "content": "This is your learning notebook.\n\nUse the AI panel to explain, expand, or quiz yourself. You can also attach a photo of handwritten work, worksheets, or reference materials.\n\nTip: choose your audience and teaching style before generating an AI explanation.",
+  "profile": {
+    "audience": "a curious beginner",
+    "style": "clear, encouraging, and practical"
+  },
+  "attachmentName": "",
+  "attachmentData": "",
+  "createdAt": "2025-01-01T00:00:00.000Z",
+  "updatedAt": "2025-01-01T00:00:00.000Z"
+}

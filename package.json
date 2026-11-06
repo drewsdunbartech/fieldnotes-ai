@@ -1,0 +1,15 @@
+{
+  "name": "fieldnotes-ai",
+  "version": "1.0.0",
+  "description": "Tablet-first note-taking app with an AI teaching assistant and camera attachments.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
